@@ -5,7 +5,7 @@ docker run --rm -p 8080:8080 pablo/my-spring-boot-project:latest
 
 #Deploy image to my repository
 docker tag pablo/my-spring-boot-project eu.gcr.io/${PROJECT_ID}/my-spring-boot-project
-docker images ls
+docker image ls
 docker push eu.gcr.io/${PROJECT_ID}/my-spring-boot-project
 
 #gcloud docker -- push pablo/${PROJECT_ID}/my-spring-boot-project:latest
@@ -18,6 +18,9 @@ kubectl get pods
 kubectl expose deployment hello-web --type=LoadBalancer --port 80 --target-port 8080
 
 kubectl get service
+
+#Update
+kubectl set image deployment/hello-web hello-web=eu.gcr.io/${PROJECT_ID}/my-spring-boot-project
 
 #Stop
 kubectl delete service hello-web

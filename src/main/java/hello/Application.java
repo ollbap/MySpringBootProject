@@ -1,5 +1,7 @@
 package hello;
 
+import java.util.Date;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +13,7 @@ public class Application {
 
     @RequestMapping("/")
     public String home() {
-        return "Hello Docker World, MySpringBootProyect Test2";
+        return "Hello Docker World, MySpringBootProyect: "+new Date()+" TEST3";
     }
 
     public static void main(String[] args) {
