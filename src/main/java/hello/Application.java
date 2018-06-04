@@ -13,7 +13,7 @@ public class Application {
 
     @RequestMapping("/")
     public String home() {
-        return "Hello Docker World, MySpringBootProyect: "+new Date()+" TEST3";
+        return "Hello Docker World, MySpringBootProyect: "+new Date()+" V5";
     }
 
     public static void main(String[] args) {
